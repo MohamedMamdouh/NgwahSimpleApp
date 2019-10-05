@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, TextInput } from 'react-native';
 import styles from './Styles/InputStyle';
 
-const Input = ({ placeholder, secureTextEntry }) => {
+const Input = ({ placeholder, secureTextEntry, type }) => {
   const [input, setInput] = useState('');
   return (
     <View style={styles.container}>
@@ -18,6 +18,7 @@ const Input = ({ placeholder, secureTextEntry }) => {
         autoCorrect={false}
         autoCapitalize="none"
         secureTextEntry={secureTextEntry}
+        keyboardType={type}
       />
     </View>
   );
@@ -27,10 +28,12 @@ export default Input;
 // // Prop type warnings
 Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
-  secureTextEntry: PropTypes.bool
+  secureTextEntry: PropTypes.bool,
+  type: PropTypes.string
 };
 
 // Defaults for props
 Input.defaultProps = {
-  secureTextEntry: false
+  secureTextEntry: false,
+  type: 'default'
 };

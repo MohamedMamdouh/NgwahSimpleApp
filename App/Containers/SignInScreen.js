@@ -24,7 +24,10 @@ class SignInScreen extends Component {
               <Input placeholder="Email" />
               <Input placeholder="password" secureTextEntry />
               <SubmitButton />
-              <RedirectText title="Login using phone Number" />
+              <RedirectText
+                title="Login using phone Number"
+                navigation={() => navigation.navigate('PhoneSignInScreen')}
+              />
               <RedirectText
                 title="SignUp"
                 navigation={() => navigation.navigate('SignUpScreen')}
