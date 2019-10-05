@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 import Input from '../Components/Input';
 import SubmitButton from '../Components/SubmitButton';
+import RedirectText from '../Components/RedirectText';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -29,6 +30,8 @@ class SignInScreen extends Component {
               <Input placeholder="Email" />
               <Input placeholder="password" secureTextEntry />
               <SubmitButton />
+              <RedirectText title="Login using phone Number" />
+              <RedirectText title="SignUp" />
             </View>
           </View>
         </KeyboardAvoidingView>
