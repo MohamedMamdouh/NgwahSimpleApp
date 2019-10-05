@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  ScrollView,
-  Text,
-  KeyboardAvoidingView,
-  SafeAreaView,
-  View
-} from 'react-native';
+import { Text, KeyboardAvoidingView, SafeAreaView, View } from 'react-native';
 import { connect } from 'react-redux';
 import Input from '../Components/Input';
 import SubmitButton from '../Components/SubmitButton';
@@ -18,10 +12,10 @@ import styles from './Styles/SignInScreenStyle';
 
 class SignInScreen extends Component {
   render() {
+    const { navigation } = this.props;
     return (
       <SafeAreaView>
         <KeyboardAvoidingView behavior="position">
-          {/* <Input /> */}
           <View style={styles.innerContainer}>
             <View>
               <Text>Sign In</Text>
@@ -31,7 +25,10 @@ class SignInScreen extends Component {
               <Input placeholder="password" secureTextEntry />
               <SubmitButton />
               <RedirectText title="Login using phone Number" />
-              <RedirectText title="SignUp" />
+              <RedirectText
+                title="SignUp"
+                navigation={() => navigation.navigate('SignUpScreen')}
+              />
             </View>
           </View>
         </KeyboardAvoidingView>

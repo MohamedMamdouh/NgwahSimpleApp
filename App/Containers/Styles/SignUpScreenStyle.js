@@ -1,6 +1,10 @@
-import { StyleSheet } from 'react-native'
-import { ApplicationStyles } from '../../Themes/'
+import { StyleSheet } from 'react-native';
+import { Metrics } from '../../Themes/';
 
 export default StyleSheet.create({
-  ...ApplicationStyles.screen
-})
+  innerContainer: {
+    height: Metrics.screenHeight,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
