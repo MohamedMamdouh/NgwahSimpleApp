@@ -18,23 +18,21 @@ import styles from './Styles/SignInScreenStyle';
 class SignInScreen extends Component {
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
-        <SafeAreaView>
-          <KeyboardAvoidingView behavior="position">
-            {/* <Input /> */}
-            <View style={styles.innerContainer}>
-              <View>
-                <Text>Sign In</Text>
-              </View>
-              <View>
-                <Input placeholder="Email" />
-                <Input placeholder="password" secureTextEntry />
-                <SubmitButton />
-              </View>
+      <SafeAreaView>
+        <KeyboardAvoidingView behavior="position">
+          {/* <Input /> */}
+          <View style={styles.innerContainer}>
+            <View>
+              <Text>Sign In</Text>
             </View>
-          </KeyboardAvoidingView>
-        </SafeAreaView>
-      </ScrollView>
+            <View>
+              <Input placeholder="Email" />
+              <Input placeholder="password" secureTextEntry />
+              <SubmitButton />
+            </View>
+          </View>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     );
   }
 }
